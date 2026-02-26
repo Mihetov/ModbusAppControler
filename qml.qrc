@@ -8,5 +8,8 @@
         <file>logic/BackendClient.qml</file>
         <file>logic/DeviceScanner.qml</file>
         <file>logic/RegisterModel.qml</file>
+        <file>sections/PingSection.qml</file>
+        <file>sections/SectionBase.qml</file>
+        <file>dialogs/ConnectionDialog.qml</file>
     </qresource>
 </RCC>
