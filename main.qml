@@ -96,7 +96,10 @@ ApplicationWindow {
                     delegate: ItemDelegate {
                         width: sidebar.width
                         height: 56
-                        highlighted: sidebar.currentIndex === index
+                        // 🔧 Безопасное сравнение: проверяем, что currentIndex и index определены
+                        highlighted: sidebar.currentIndex !== undefined &&
+                                     index !== undefined &&
+                                     sidebar.currentIndex === index
 
                         Rectangle {
                             anchors.fill: parent
@@ -107,7 +110,6 @@ ApplicationWindow {
                                 return "transparent"
                             }
                         }
-
                         contentItem: RowLayout {
                             anchors.fill: parent
                             anchors.leftMargin: 12
